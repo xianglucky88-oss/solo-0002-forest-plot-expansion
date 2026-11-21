@@ -1,0 +1,123 @@
+{
+  "survey": "ridge-demo",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 8,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": "3/4"
+        },
+        {
+          "id": "p1b",
+          "cover": "mixed",
+          "fraction": "1/4"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        {
+          "id": "p2a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 6,
+      "segments": [
+        {
+          "id": "p3a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "district": "South",
+      "plot_m2": 200,
+      "expansion_ha": 8,
+      "segments": [
+        {
+          "id": "p4a",
+          "cover": "pine",
+          "fraction": "1/2"
+        },
+        {
+          "id": "p4b",
+          "cover": "mixed",
+          "fraction": "1/2"
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "oak-01",
+          "dbh_cm": 20
+        },
+        {
+          "id": "oak-02",
+          "dbh_cm": 10
+        },
+        {
+          "id": "young-01",
+          "dbh_cm": 8
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "plot": "p1",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "mix-01",
+          "dbh_cm": 30
+        }
+      ]
+    },
+    {
+      "id": "v3",
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v4",
+      "plot": "p3",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v5",
+      "plot": "p4",
+      "cover": "mixed",
+      "status": "not_scheduled",
+      "trees": []
+    }
+  ]
+}
