@@ -1,0 +1,31 @@
+{
+  "survey": "ridge-demo",
+  "editions": ["original", "revised"],
+  "note": "Candidate cross-edition identity links. A candidate is a hypothesis, never a confirmation; it is used only to plan verification.",
+  "visit_candidates": [
+    {
+      "id": "vc-1",
+      "old_visit": "v1",
+      "new_visit": "v1",
+      "reason": "same field visit relogged under the same tag at p1 pine"
+    }
+  ],
+  "tree_candidates": [
+    {
+      "id": "tc-1",
+      "old_visit": "v1",
+      "old_tree": "oak-01",
+      "new_visit": "v1",
+      "new_tree": "oak-02",
+      "reason": "faded metal tag; field crew suspects the oak tags were swapped"
+    },
+    {
+      "id": "tc-2",
+      "old_visit": "v1",
+      "old_tree": "oak-02",
+      "new_visit": "v1",
+      "new_tree": "oak-01",
+      "reason": "counter-link of the same suspected tag swap"
+    }
+  ]
+}
