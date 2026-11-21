@@ -1,0 +1,86 @@
+{
+  "survey": "ridge-demo",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "nested": {
+        "design": {
+          "threshold_cm": 20,
+          "small": {
+            "plot_m2": 100,
+            "radius_cm": 500
+          },
+          "large": {
+            "plot_m2": 400,
+            "radius_cm": 1000
+          }
+        },
+        "readings": [
+          {
+            "id": "r1",
+            "tree": "t-overlap",
+            "circle": "small",
+            "dbh_cm": 19,
+            "distance_cm": [
+              0,
+              300
+            ],
+            "remeasure": "none"
+          },
+          {
+            "id": "r2",
+            "tree": "t-overlap",
+            "circle": "large",
+            "dbh_cm": 22,
+            "distance_cm": [
+              200,
+              400
+            ],
+            "remeasure": "accepted"
+          },
+          {
+            "id": "r3",
+            "tree": "t-boundary",
+            "circle": "small",
+            "dbh_cm": 14,
+            "distance_cm": [
+              450,
+              620
+            ],
+            "remeasure": "none"
+          },
+          {
+            "id": "r4",
+            "tree": "t-small",
+            "circle": "small",
+            "dbh_cm": 12,
+            "distance_cm": [
+              0,
+              300
+            ],
+            "remeasure": "none"
+          }
+        ]
+      }
+    }
+  ]
+}
