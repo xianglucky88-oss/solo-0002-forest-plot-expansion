@@ -1,0 +1,82 @@
+[
+  {
+    "edition": "E0-baseline",
+    "bundle": "input/baseline.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E0-baseline",
+      "result_sha256": "97ffd3e5c2b442491c350ab4f2f8eaf3cea3fc82a1be064716050a0a730337a1",
+      "source_sha256": "a02e9f5174e2c09a2cff811425d2bd6d3abdff98521fe52aaa9c9d460d5b1e2e"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": "E1-D",
+    "bundle": "bundles/D.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E1-D",
+      "result_sha256": "88f5878a67595cda660fd42c4b38bdc34277de7028fddf42c1f477a6ef4dbeda",
+      "source_sha256": "5b999025ce14e8e5a60c1d860080b1c4d2f0edb63081b2e5a292d74e2750ede2"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": "E2-S",
+    "bundle": "bundles/S.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E2-S",
+      "result_sha256": "8b2e0357e64569ea165aeba33944efe8f83a458eef5549ebdcac8c2f0df25aaf",
+      "source_sha256": "9ad23763009246a46106758f87c43dfc18036f316b8c0259424327dac73239cf"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": "E3-DF",
+    "bundle": "bundles/DF.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E3-DF",
+      "result_sha256": "b597ee770250c6b9c61e6674a191dbac9292719af574401730ade7f943492026",
+      "source_sha256": "2c657af041081ebca5479fe9fb53cd3b54a6750bbc4ff3dfd80709bf256db997"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": "E4-DS",
+    "bundle": "bundles/DS.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E4-DS",
+      "result_sha256": "3254d896f18814fd8315dd598fb41c0aa2e51beb9c0e5648303f835bc2b9a172",
+      "source_sha256": "1a9c95c06a65e05d135ca9ef742d3f8dc74d3d994aae95fd1fec7aaa1646a502"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": "E5-DFS",
+    "bundle": "bundles/DFS.json",
+    "publish_exit": 0,
+    "publish_output": {
+      "edition": "E5-DFS",
+      "result_sha256": "ad791d60e264761e683af45f3331e994bc300f96f34ee4574ff356f268549e6b",
+      "source_sha256": "abf9023aa5188df95e5986ea90f0dc823c8bbe31309a720d01e454f38764f65b"
+    },
+    "replay_exit": 0
+  },
+  {
+    "edition": null,
+    "bundle": "bundles/F.json",
+    "combo": "F",
+    "preview_exit": 2,
+    "reject_reason": "__main__.py: unknown or duplicate plot-cover visit: v3"
+  },
+  {
+    "edition": null,
+    "bundle": "bundles/FS.json",
+    "combo": "FS",
+    "preview_exit": 2,
+    "reject_reason": "__main__.py: unknown or duplicate plot-cover visit: v3"
+  }
+]

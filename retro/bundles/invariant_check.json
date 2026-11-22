@@ -1,0 +1,96 @@
+{
+  "report": "North/mixed",
+  "numeric_fields_identical_between_E0_and_E3": false,
+  "class_densities_identical_between_E0_and_E3": false,
+  "visits_change": {
+    "E0-baseline": [
+      "v2"
+    ],
+    "E3-DF": [
+      "v2",
+      "v3"
+    ]
+  },
+  "rows": {
+    "E0-baseline": {
+      "design_ha": 1,
+      "visited_ha": 1,
+      "unobserved_ha": 0,
+      "trees_per_visited_ha": 100,
+      "basal_pi_m2_per_visited_ha": "9/4",
+      "visits": [
+        "v2"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": 100
+      }
+    },
+    "E1-D": {
+      "design_ha": 3,
+      "visited_ha": 1,
+      "unobserved_ha": 2,
+      "trees_per_visited_ha": 100,
+      "basal_pi_m2_per_visited_ha": "9/4",
+      "visits": [
+        "v2"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": 100
+      }
+    },
+    "E2-S": {
+      "design_ha": 1,
+      "visited_ha": 1,
+      "unobserved_ha": 0,
+      "trees_per_visited_ha": 100,
+      "basal_pi_m2_per_visited_ha": "9/4",
+      "visits": [
+        "v2"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": 100
+      }
+    },
+    "E3-DF": {
+      "design_ha": 3,
+      "visited_ha": 3,
+      "unobserved_ha": 0,
+      "trees_per_visited_ha": "100/3",
+      "basal_pi_m2_per_visited_ha": "3/4",
+      "visits": [
+        "v2",
+        "v3"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": "100/3"
+      }
+    },
+    "E4-DS": {
+      "design_ha": 3,
+      "visited_ha": 1,
+      "unobserved_ha": 2,
+      "trees_per_visited_ha": 100,
+      "basal_pi_m2_per_visited_ha": "9/4",
+      "visits": [
+        "v2"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": 100
+      }
+    },
+    "E5-DFS": {
+      "design_ha": 3,
+      "visited_ha": 3,
+      "unobserved_ha": 0,
+      "trees_per_visited_ha": "100/3",
+      "basal_pi_m2_per_visited_ha": "3/4",
+      "visits": [
+        "v2",
+        "v3"
+      ],
+      "class_trees_per_visited_ha": {
+        "30": "100/3"
+      }
+    }
+  }
+}

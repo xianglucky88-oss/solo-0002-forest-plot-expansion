@@ -1,0 +1,692 @@
+{
+  "editions": [
+    "E0-baseline",
+    "E1-D",
+    "E2-S",
+    "E3-DF",
+    "E4-DS",
+    "E5-DFS"
+  ],
+  "versus_baseline": {
+    "E1-D": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 0,
+          "to": 2,
+          "delta": "2"
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 6,
+          "to": 4,
+          "delta": "-2"
+        }
+      }
+    },
+    "E2-S": {
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    },
+    "E3-DF": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "visited_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "trees_per_visited_ha": {
+          "from": 100,
+          "to": "100/3",
+          "delta": "-200/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "9/4",
+          "to": "3/4",
+          "delta": "-3/2"
+        },
+        "visits": {
+          "from": [
+            "v2"
+          ],
+          "to": [
+            "v2",
+            "v3"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "30": 100
+          },
+          "to": {
+            "30": "100/3"
+          }
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "visited_ha": {
+          "from": 5,
+          "to": 3,
+          "delta": "-2"
+        },
+        "trees_per_visited_ha": {
+          "from": 40,
+          "to": "200/3",
+          "delta": "80/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "1/4",
+          "to": "5/12",
+          "delta": "1/6"
+        },
+        "visits": {
+          "from": [
+            "v1",
+            "v3"
+          ],
+          "to": [
+            "v1"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "10": 20,
+            "20": 20
+          },
+          "to": {
+            "10": "100/3",
+            "20": "100/3"
+          }
+        }
+      }
+    },
+    "E4-DS": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 0,
+          "to": 2,
+          "delta": "2"
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 6,
+          "to": 4,
+          "delta": "-2"
+        }
+      },
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    },
+    "E5-DFS": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "visited_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "trees_per_visited_ha": {
+          "from": 100,
+          "to": "100/3",
+          "delta": "-200/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "9/4",
+          "to": "3/4",
+          "delta": "-3/2"
+        },
+        "visits": {
+          "from": [
+            "v2"
+          ],
+          "to": [
+            "v2",
+            "v3"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "30": 100
+          },
+          "to": {
+            "30": "100/3"
+          }
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "visited_ha": {
+          "from": 5,
+          "to": 3,
+          "delta": "-2"
+        },
+        "trees_per_visited_ha": {
+          "from": 40,
+          "to": "200/3",
+          "delta": "80/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "1/4",
+          "to": "5/12",
+          "delta": "1/6"
+        },
+        "visits": {
+          "from": [
+            "v1",
+            "v3"
+          ],
+          "to": [
+            "v1"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "10": 20,
+            "20": 20
+          },
+          "to": {
+            "10": "100/3",
+            "20": "100/3"
+          }
+        }
+      },
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    }
+  },
+  "marginals": {
+    "D alone: E0->E1": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 0,
+          "to": 2,
+          "delta": "2"
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 6,
+          "to": 4,
+          "delta": "-2"
+        }
+      }
+    },
+    "S alone: E0->E2": {
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    },
+    "F after D: E1->E3": {
+      "North/mixed": {
+        "visited_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 2,
+          "to": 0,
+          "delta": "-2"
+        },
+        "trees_per_visited_ha": {
+          "from": 100,
+          "to": "100/3",
+          "delta": "-200/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "9/4",
+          "to": "3/4",
+          "delta": "-3/2"
+        },
+        "visits": {
+          "from": [
+            "v2"
+          ],
+          "to": [
+            "v2",
+            "v3"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "30": 100
+          },
+          "to": {
+            "30": "100/3"
+          }
+        }
+      },
+      "North/pine": {
+        "visited_ha": {
+          "from": 5,
+          "to": 3,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 6,
+          "delta": "2"
+        },
+        "trees_per_visited_ha": {
+          "from": 40,
+          "to": "200/3",
+          "delta": "80/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "1/4",
+          "to": "5/12",
+          "delta": "1/6"
+        },
+        "visits": {
+          "from": [
+            "v1",
+            "v3"
+          ],
+          "to": [
+            "v1"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "10": 20,
+            "20": 20
+          },
+          "to": {
+            "10": "100/3",
+            "20": "100/3"
+          }
+        }
+      }
+    },
+    "S after D: E1->E4": {
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    },
+    "D after S: E2->E4": {
+      "North/mixed": {
+        "design_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 0,
+          "to": 2,
+          "delta": "2"
+        }
+      },
+      "North/pine": {
+        "design_ha": {
+          "from": 11,
+          "to": 9,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 6,
+          "to": 4,
+          "delta": "-2"
+        }
+      }
+    },
+    "S after DF: E3->E5": {
+      "South/mixed": {
+        "design_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 5,
+          "delta": "1"
+        }
+      },
+      "South/pine": {
+        "design_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 3,
+          "delta": "-1"
+        }
+      }
+    },
+    "F after DS: E4->E5": {
+      "North/mixed": {
+        "visited_ha": {
+          "from": 1,
+          "to": 3,
+          "delta": "2"
+        },
+        "unobserved_ha": {
+          "from": 2,
+          "to": 0,
+          "delta": "-2"
+        },
+        "trees_per_visited_ha": {
+          "from": 100,
+          "to": "100/3",
+          "delta": "-200/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "9/4",
+          "to": "3/4",
+          "delta": "-3/2"
+        },
+        "visits": {
+          "from": [
+            "v2"
+          ],
+          "to": [
+            "v2",
+            "v3"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "30": 100
+          },
+          "to": {
+            "30": "100/3"
+          }
+        }
+      },
+      "North/pine": {
+        "visited_ha": {
+          "from": 5,
+          "to": 3,
+          "delta": "-2"
+        },
+        "unobserved_ha": {
+          "from": 4,
+          "to": 6,
+          "delta": "2"
+        },
+        "trees_per_visited_ha": {
+          "from": 40,
+          "to": "200/3",
+          "delta": "80/3"
+        },
+        "basal_pi_m2_per_visited_ha": {
+          "from": "1/4",
+          "to": "5/12",
+          "delta": "1/6"
+        },
+        "visits": {
+          "from": [
+            "v1",
+            "v3"
+          ],
+          "to": [
+            "v1"
+          ]
+        },
+        "class_trees_per_visited_ha": {
+          "from": {
+            "10": 20,
+            "20": 20
+          },
+          "to": {
+            "10": "100/3",
+            "20": "100/3"
+          }
+        }
+      }
+    }
+  },
+  "v3_fact_path": {
+    "E0-baseline": {
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    },
+    "E1-D": {
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    },
+    "E2-S": {
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    },
+    "E3-DF": {
+      "plot": "p2",
+      "cover": "mixed",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    },
+    "E4-DS": {
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    },
+    "E5-DFS": {
+      "plot": "p2",
+      "cover": "mixed",
+      "status": "visited",
+      "represented_ha": 2,
+      "expanded_trees": 0,
+      "expanded_basal_pi_m2": 0,
+      "admitted_trees": [],
+      "expanded_by_10cm_class": {}
+    }
+  },
+  "v3_numeric_invariant": {
+    "represented_ha": {
+      "E0-baseline": 2,
+      "E3-DF": 2,
+      "numerically_identical": true
+    },
+    "expanded_trees": {
+      "E0-baseline": 0,
+      "E3-DF": 0,
+      "numerically_identical": true
+    },
+    "expanded_basal_pi_m2": {
+      "E0-baseline": 0,
+      "E3-DF": 0,
+      "numerically_identical": true
+    },
+    "expanded_by_10cm_class": {
+      "E0-baseline": {},
+      "E3-DF": {},
+      "numerically_identical": true
+    },
+    "reference_change": {
+      "E0-baseline": {
+        "plot": "p2",
+        "cover": "pine"
+      },
+      "E3-DF": {
+        "plot": "p2",
+        "cover": "mixed"
+      }
+    }
+  }
+}
