@@ -1,0 +1,136 @@
+{
+  "survey": "rollup-mixed-status",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "East",
+      "plot_m2": 400,
+      "expansion_ha": 10,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "district": "East",
+      "plot_m2": 400,
+      "expansion_ha": 10,
+      "segments": [
+        {
+          "id": "p2a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "district": "East",
+      "plot_m2": 400,
+      "expansion_ha": 10,
+      "segments": [
+        {
+          "id": "p3a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "oak-01",
+          "dbh_cm": 20
+        },
+        {
+          "id": "oak-02",
+          "dbh_cm": 20
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v3",
+      "plot": "p3",
+      "cover": "pine",
+      "status": "inaccessible",
+      "trees": []
+    }
+  ],
+  "management": {
+    "subareas": [
+      {
+        "id": "sub-a"
+      },
+      {
+        "id": "sub-b"
+      }
+    ],
+    "regions": [
+      {
+        "id": "macro-r",
+        "subareas": [
+          "sub-a",
+          "sub-b"
+        ]
+      }
+    ],
+    "memberships": [
+      {
+        "subarea": "sub-a",
+        "plot": "p1",
+        "cover": "pine",
+        "fraction": 1
+      },
+      {
+        "subarea": "sub-a",
+        "plot": "p2",
+        "cover": "pine",
+        "fraction": 1
+      },
+      {
+        "subarea": "sub-a",
+        "plot": "p3",
+        "cover": "pine",
+        "fraction": "1/2"
+      },
+      {
+        "subarea": "sub-b",
+        "plot": "p3",
+        "cover": "pine",
+        "fraction": "1"
+      }
+    ],
+    "overlap_edges": [
+      {
+        "a": "sub-a",
+        "b": "sub-b",
+        "kind": "proven",
+        "shared": [
+          {
+            "plot": "p3",
+            "cover": "pine",
+            "fraction": "1/2"
+          }
+        ]
+      }
+    ]
+  }
+}

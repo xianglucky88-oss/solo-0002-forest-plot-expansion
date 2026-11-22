@@ -4,6 +4,7 @@ from fractions import Fraction
 from .census import visit_facts
 from .common import number, scalar
 from .design import load_plots
+from .rollup import roll_management
 
 DESCRIPTION = 'Publish weighted inventory based on supported plot-cover visits.'
 
@@ -36,4 +37,9 @@ def materialize(doc):
     plots = load_plots(doc['plots'])
     minimum = number(doc['min_dbh_cm'], 'minimum diameter')
     facts = visit_facts(plots, doc['visits'], minimum)
-    return {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum), 'plot_cover_facts': facts, 'districts': summarize(facts)}
+    result = {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum),
+              'plot_cover_facts': facts, 'districts': summarize(facts)}
+    management = roll_management(facts, doc.get('management'))
+    if management is not None:
+        result['management'] = management
+    return result
