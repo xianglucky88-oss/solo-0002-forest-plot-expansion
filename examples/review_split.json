@@ -1,0 +1,71 @@
+{
+  "survey": "identity-acceptance",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "old-a",
+          "dbh_cm": 20
+        },
+        {
+          "id": "old-b",
+          "dbh_cm": 14
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1-split",
+      "visit": "v1",
+      "stems": [
+        {
+          "id": "s-x",
+          "dbh_cm": 22
+        },
+        {
+          "id": "s-y",
+          "dbh_cm": 16
+        },
+        {
+          "id": "s-z",
+          "dbh_cm": null
+        }
+      ],
+      "certified": [
+        {
+          "type": "split",
+          "review_stem": "s-x",
+          "old_stem": "old-a",
+          "added_review_stems": ["s-z"]
+        },
+        {
+          "type": "rename",
+          "review_stem": "s-y",
+          "old_stem": "old-b"
+        }
+      ],
+      "ambiguities": []
+    }
+  ]
+}

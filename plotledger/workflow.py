@@ -2,8 +2,9 @@ from collections import defaultdict
 from fractions import Fraction
 
 from .census import visit_facts
-from .common import number, scalar
+from .common import number, require, scalar
 from .design import load_plots
+from .review import reconcile
 
 DESCRIPTION = 'Publish weighted inventory based on supported plot-cover visits.'
 
@@ -35,5 +36,12 @@ def summarize(facts):
 def materialize(doc):
     plots = load_plots(doc['plots'])
     minimum = number(doc['min_dbh_cm'], 'minimum diameter')
-    facts = visit_facts(plots, doc['visits'], minimum)
-    return {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum), 'plot_cover_facts': facts, 'districts': summarize(facts)}
+    visits = doc['visits']
+    facts = visit_facts(plots, visits, minimum)
+    result = {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum),
+              'plot_cover_facts': facts, 'districts': summarize(facts)}
+    reviews = doc.get('reviews', [])
+    if reviews:
+        require(isinstance(reviews, list), 'reviews must be a list')
+        result['review_reconciliations'] = reconcile(plots, visits, minimum, reviews)
+    return result

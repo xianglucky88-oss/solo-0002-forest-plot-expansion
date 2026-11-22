@@ -3,6 +3,11 @@ from collections import Counter
 from .common import number, require, scalar, unique
 
 
+def expansion_unit(area_m2, expansion_ha):
+    # One counted stem represents this many stems per represented hectare basis.
+    return expansion_ha / (area_m2 / 10_000)
+
+
 def visit_facts(plots, visits, min_dbh):
     facts = []
     seen = set()
@@ -19,7 +24,7 @@ def visit_facts(plots, visits, min_dbh):
         admitted = {name: number(tree['dbh_cm'], 'diameter') for name, tree in trees.items()}
         admitted = {k: v for k, v in admitted.items() if v >= min_dbh}
         # Basal area is represented as a rational coefficient of pi m^2.
-        unit = weight / (area / 10_000)
+        unit = expansion_unit(area, weight)
         classes = Counter()
         for diameter in admitted.values():
             classes[str((diameter // 10) * 10)] += unit
