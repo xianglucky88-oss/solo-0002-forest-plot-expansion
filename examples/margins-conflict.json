@@ -1,0 +1,58 @@
+{
+  "survey": "ridge-margins-conflict",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "m1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 10,
+      "segments": [
+        { "id": "m1a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": "3/4", "Z2": "1/4" },
+      "factor_bounds": [1, 2]
+    },
+    {
+      "id": "m2",
+      "district": "South",
+      "plot_m2": 400,
+      "expansion_ha": 10,
+      "segments": [
+        { "id": "m2a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": "1/4", "Z2": "3/4" },
+      "factor_bounds": [1, 2]
+    }
+  ],
+  "visits": [
+    {
+      "id": "w1",
+      "plot": "m1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t1", "dbh_cm": 30 }
+      ]
+    },
+    {
+      "id": "w2",
+      "plot": "m2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t2", "dbh_cm": 30 }
+      ]
+    }
+  ],
+  "controls": {
+    "zone_cover": {
+      "Z1": { "pine": "25/2" },
+      "Z2": { "pine": "25/2" }
+    },
+    "district_cover": {
+      "North": { "pine": 10 },
+      "South": { "pine": 10 }
+    }
+  }
+}

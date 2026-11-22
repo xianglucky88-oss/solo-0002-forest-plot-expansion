@@ -1,0 +1,54 @@
+{
+  "survey": "ridge-straddle",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "s1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        { "id": "s1a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": 1 },
+      "factor_bounds": [1, 2]
+    },
+    {
+      "id": "s2",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        { "id": "s2a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": 1 },
+      "factor_bounds": [1, 2]
+    }
+  ],
+  "visits": [
+    {
+      "id": "w1",
+      "plot": "s1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t1", "dbh_cm": 20 },
+        { "id": "t2", "dbh_cm": 10 }
+      ]
+    },
+    {
+      "id": "w2",
+      "plot": "s2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    }
+  ],
+  "controls": {
+    "zone_cover": { "Z1": { "pine": 9 } },
+    "district_cover": { "North": { "pine": 9 } }
+  },
+  "density_thresholds": [
+    { "margin": "zone", "zone": "Z1", "cover": "pine", "statistic": "trees_per_ha", "threshold": 30 }
+  ]
+}

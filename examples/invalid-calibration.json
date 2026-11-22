@@ -1,0 +1,30 @@
+{
+  "survey": "ridge-invalid-calibration",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        { "id": "p1a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": "1/2", "Z2": "1/4" },
+      "factor_bounds": ["1/2", 2]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    }
+  ],
+  "controls": {
+    "zone_cover": { "Z1": { "pine": 4 } },
+    "district_cover": { "North": { "pine": 4 } }
+  }
+}

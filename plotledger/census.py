@@ -8,7 +8,9 @@ def visit_facts(plots, visits, min_dbh):
     seen = set()
     for key, row in sorted(unique(visits).items()):
         plot, cover = row['plot'], row['cover']
-        district, area, weight, shares = plots[plot]
+        record = plots[plot]
+        district, area, weight, shares = (record['district'], record['area_m2'],
+                                          record['weight_ha'], record['shares'])
         share = shares.get(cover, 0)
         require(share > 0 and (plot, cover) not in seen, f'unknown or duplicate plot-cover visit: {key}')
         seen.add((plot, cover))
@@ -29,7 +31,8 @@ def visit_facts(plots, visits, min_dbh):
                       'expanded_basal_pi_m2': scalar(unit * sum(d * d for d in admitted.values()) / 40_000)
                       if state == 'visited' else None,
                       'expanded_by_10cm_class': {k: scalar(v) for k, v in sorted(classes.items())}})
-    for key, (district, _, weight, shares) in plots.items():
+    for key, record in plots.items():
+        district, weight, shares = record['district'], record['weight_ha'], record['shares']
         for cover, share in sorted(shares.items()):
             if share > 0 and (key, cover) not in seen:
                 facts.append({'visit': None, 'plot': key, 'district': district, 'cover': cover, 'status': 'not_recorded',

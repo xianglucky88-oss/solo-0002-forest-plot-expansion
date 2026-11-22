@@ -1,11 +1,12 @@
 from collections import defaultdict
 from fractions import Fraction
 
+from .calibrate import calibrate_package
 from .census import visit_facts
 from .common import number, scalar
 from .design import load_plots
 
-DESCRIPTION = 'Publish weighted inventory based on supported plot-cover visits.'
+DESCRIPTION = 'Publish weighted inventory and calibrated estimate packages.'
 
 
 def summarize(facts):
@@ -33,7 +34,10 @@ def summarize(facts):
 
 
 def materialize(doc):
+    if 'controls' in doc:
+        return calibrate_package(doc)
     plots = load_plots(doc['plots'])
     minimum = number(doc['min_dbh_cm'], 'minimum diameter')
     facts = visit_facts(plots, doc['visits'], minimum)
-    return {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum), 'plot_cover_facts': facts, 'districts': summarize(facts)}
+    return {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum), 'plot_cover_facts': facts,
+            'districts': summarize(facts)}

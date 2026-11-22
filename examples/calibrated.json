@@ -1,0 +1,145 @@
+{
+  "survey": "ridge-calibration",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        { "id": "p1a", "cover": "pine", "fraction": "3/4" },
+        { "id": "p1b", "cover": "mixed", "fraction": "1/4" }
+      ],
+      "zone_shares": { "Z1": "1/2", "Z2": "1/2" },
+      "factor_bounds": ["1/2", 2]
+    },
+    {
+      "id": "p2",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        { "id": "p2a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": 1 },
+      "factor_bounds": ["1/2", 2]
+    },
+    {
+      "id": "p3",
+      "district": "South",
+      "plot_m2": 400,
+      "expansion_ha": 6,
+      "segments": [
+        { "id": "p3a", "cover": "pine", "fraction": "1/2" },
+        { "id": "p3b", "cover": "mixed", "fraction": "1/2" }
+      ],
+      "zone_shares": { "Z2": 1 },
+      "factor_bounds": ["1/2", 2]
+    },
+    {
+      "id": "p4",
+      "district": "South",
+      "plot_m2": 400,
+      "expansion_ha": 8,
+      "segments": [
+        { "id": "p4a", "cover": "mixed", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": "1/4", "Z2": "3/4" },
+      "factor_bounds": ["1/2", 2]
+    },
+    {
+      "id": "p5",
+      "district": "South",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        { "id": "p5a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z2": 1 },
+      "factor_bounds": ["1/2", 2]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t1", "dbh_cm": 20 },
+        { "id": "t2", "dbh_cm": 10 },
+        { "id": "t3", "dbh_cm": 8 }
+      ]
+    },
+    {
+      "id": "v2",
+      "plot": "p1",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": [
+        { "id": "t4", "dbh_cm": 30 }
+      ]
+    },
+    {
+      "id": "v3",
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v4",
+      "plot": "p3",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t5", "dbh_cm": 40 }
+      ]
+    },
+    {
+      "id": "v5",
+      "plot": "p3",
+      "cover": "mixed",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v6",
+      "plot": "p4",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": [
+        { "id": "t6", "dbh_cm": 10 },
+        { "id": "t7", "dbh_cm": 20 }
+      ]
+    },
+    {
+      "id": "v7",
+      "plot": "p5",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t8", "dbh_cm": 12 }
+      ]
+    }
+  ],
+  "controls": {
+    "zone_cover": {
+      "Z1": { "pine": "9/2", "mixed": 3 },
+      "Z2": { "pine": "17/2", "mixed": 8 }
+    },
+    "district_cover": {
+      "North": { "pine": 6, "mixed": 1 },
+      "South": { "pine": 7, "mixed": 10 }
+    }
+  },
+  "density_thresholds": [
+    { "margin": "zone", "zone": "Z1", "cover": "pine", "statistic": "trees_per_ha", "threshold": 25 },
+    { "margin": "zone", "zone": "Z1", "cover": "mixed", "statistic": "trees_per_ha", "threshold": 50 },
+    { "margin": "zone", "zone": "Z2", "cover": "pine", "statistic": "trees_per_ha", "threshold": 50 },
+    { "margin": "district", "district": "North", "cover": "pine", "statistic": "trees_per_ha", "threshold": 30 },
+    { "margin": "district", "district": "North", "cover": "pine", "statistic": "basal_pi_m2_per_ha", "threshold": "1/4" },
+    { "margin": "district", "district": "South", "cover": "pine", "statistic": "trees_per_ha", "threshold": 45 }
+  ]
+}

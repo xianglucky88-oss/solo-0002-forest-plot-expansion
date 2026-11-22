@@ -1,0 +1,56 @@
+{
+  "survey": "ridge-unsupported",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "u1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        { "id": "u1a", "cover": "pine", "fraction": 1 }
+      ],
+      "zone_shares": { "Z1": 1 },
+      "factor_bounds": ["1/2", 2]
+    },
+    {
+      "id": "u2",
+      "district": "South",
+      "plot_m2": 400,
+      "expansion_ha": 8,
+      "segments": [
+        { "id": "u2a", "cover": "cedar", "fraction": 1 }
+      ],
+      "zone_shares": { "Z2": 1 },
+      "factor_bounds": ["1/2", 2]
+    }
+  ],
+  "visits": [
+    {
+      "id": "w1",
+      "plot": "u1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        { "id": "t1", "dbh_cm": 15 }
+      ]
+    },
+    {
+      "id": "w2",
+      "plot": "u2",
+      "cover": "cedar",
+      "status": "inaccessible",
+      "trees": []
+    }
+  ],
+  "controls": {
+    "zone_cover": {
+      "Z1": { "pine": 6 },
+      "Z2": { "cedar": 10 }
+    },
+    "district_cover": {
+      "North": { "pine": 6 },
+      "South": { "cedar": 10 }
+    }
+  }
+}
