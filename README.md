@@ -4,6 +4,7 @@
 
 ```sh
 python3 -m plotledger preview examples/baseline.json
+python3 -m plotledger preview examples/replacement.json
 python3 -m plotledger publish examples/baseline.json ledger.sqlite original
 python3 -m plotledger publish examples/changed.json ledger.sqlite revised
 python3 -m plotledger history ledger.sqlite
@@ -13,5 +14,11 @@ python3 -m plotledger replay ledger.sqlite revised
 ```
 
 `preview` 不写库；`show` 读已发布成果，`source` 读随版封存的输入，`replay` 重算并核对。`publish` 不覆盖已用版名。命令在输入错误时以状态 2 退出，不发布结果。重复演示请换版名或用新库。
+
+替访名录（`replacement_roster`）为可选输入；无名录时旧成果逐字节不变。规则与字段见 [PROJECT_SPEC.md](PROJECT_SPEC.md)，验收用例见 `tests/test_replacement.py`：
+
+```sh
+python3 -I tests/test_replacement.py
+```
 
 样本字段及成果口径见 [PROJECT_SPEC.md](PROJECT_SPEC.md)。这里的规则仅用于合成数据，并非真实业务规范。

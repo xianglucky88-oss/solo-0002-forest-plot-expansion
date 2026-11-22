@@ -1,0 +1,378 @@
+{
+  "survey": "ridge-replacement-acceptance",
+  "min_dbh_cm": 10,
+  "adoption_basal_pi_m2_per_ha": "1/8",
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "location": [
+        0,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": "3/4"
+        },
+        {
+          "id": "p1b",
+          "cover": "mixed",
+          "fraction": "1/4"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "district": "North",
+      "location": [
+        1,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        {
+          "id": "p2a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "district": "North",
+      "location": [
+        10,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 6,
+      "segments": [
+        {
+          "id": "p3a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "district": "North",
+      "location": [
+        11,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p5a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "district": "Ridge",
+      "location": [
+        12,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        {
+          "id": "p6a",
+          "cover": "pine",
+          "fraction": "1/2"
+        },
+        {
+          "id": "p6b",
+          "cover": "mixed",
+          "fraction": "1/2"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "district": "South",
+      "location": [
+        100,
+        100
+      ],
+      "plot_m2": 200,
+      "expansion_ha": 8,
+      "segments": [
+        {
+          "id": "p4a",
+          "cover": "pine",
+          "fraction": "1/2"
+        },
+        {
+          "id": "p4b",
+          "cover": "mixed",
+          "fraction": "1/2"
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "oak-01",
+          "dbh_cm": 20
+        },
+        {
+          "id": "oak-02",
+          "dbh_cm": 10
+        },
+        {
+          "id": "young-01",
+          "dbh_cm": 8
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "plot": "p1",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "mix-01",
+          "dbh_cm": 30
+        }
+      ]
+    },
+    {
+      "id": "v3",
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v4",
+      "plot": "p3",
+      "cover": "pine",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v6",
+      "plot": "p5",
+      "cover": "pine",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v7",
+      "plot": "p6",
+      "cover": "pine",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v8",
+      "plot": "p6",
+      "cover": "mixed",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v5",
+      "plot": "p4",
+      "cover": "mixed",
+      "status": "not_scheduled",
+      "trees": []
+    }
+  ],
+  "replacement_roster": [
+    {
+      "id": "c1",
+      "district": "North",
+      "location": [
+        10,
+        1
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 3,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c1v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": [
+            {
+              "id": "c1-01",
+              "dbh_cm": 20
+            },
+            {
+              "id": "c1-02",
+              "dbh_cm": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "district": "North",
+      "location": [
+        13,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c2v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": [
+            {
+              "id": "c2-01",
+              "dbh_cm": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "district": "North",
+      "location": [
+        11,
+        1
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 3,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c3v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": [
+            {
+              "id": "c3-01",
+              "dbh_cm": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "district": "Ridge",
+      "location": [
+        13,
+        3
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 1,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c6v1",
+          "cover": "mixed",
+          "status": "visited",
+          "trees": []
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "district": "Ridge",
+      "location": [
+        11,
+        3
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 1,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c7v1",
+          "cover": "mixed",
+          "status": "visited",
+          "trees": [
+            {
+              "id": "c7-01",
+              "dbh_cm": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "district": "Ridge",
+      "location": [
+        12,
+        1
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 1,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c9v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": []
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "district": "South",
+      "location": [
+        12,
+        0
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 1,
+      "public_direct": true,
+      "visits": [
+        {
+          "id": "c5v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": []
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "district": "North",
+      "location": [
+        12,
+        1
+      ],
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "public_direct": false,
+      "visits": [
+        {
+          "id": "c8v1",
+          "cover": "pine",
+          "status": "visited",
+          "trees": []
+        }
+      ]
+    }
+  ]
+}
