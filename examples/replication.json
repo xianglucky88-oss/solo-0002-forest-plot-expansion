@@ -1,0 +1,269 @@
+{
+  "survey": "ridge-replicate-demo",
+  "min_dbh_cm": 10,
+  "plots": [
+    {
+      "id": "p1",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p1a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        {
+          "id": "p2a",
+          "cover": "pine",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 4,
+      "segments": [
+        {
+          "id": "p3a",
+          "cover": "mixed",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "district": "North",
+      "plot_m2": 400,
+      "expansion_ha": 2,
+      "segments": [
+        {
+          "id": "p4a",
+          "cover": "mixed",
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "district": "South",
+      "plot_m2": 200,
+      "expansion_ha": 8,
+      "segments": [
+        {
+          "id": "p5a",
+          "cover": "pine",
+          "fraction": "1/2"
+        },
+        {
+          "id": "p5b",
+          "cover": "mixed",
+          "fraction": "1/2"
+        }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "plot": "p1",
+      "cover": "pine",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "pine-01",
+          "dbh_cm": 20
+        },
+        {
+          "id": "pine-02",
+          "dbh_cm": 20
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "plot": "p2",
+      "cover": "pine",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v3",
+      "plot": "p3",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": [
+        {
+          "id": "mix-01",
+          "dbh_cm": 30
+        }
+      ]
+    },
+    {
+      "id": "v4",
+      "plot": "p4",
+      "cover": "mixed",
+      "status": "visited",
+      "trees": []
+    },
+    {
+      "id": "v5",
+      "plot": "p5",
+      "cover": "pine",
+      "status": "inaccessible",
+      "trees": []
+    },
+    {
+      "id": "v6",
+      "plot": "p5",
+      "cover": "mixed",
+      "status": "not_scheduled",
+      "trees": []
+    }
+  ],
+  "replications": [
+    {
+      "id": "concordant",
+      "contrasts": [
+        {
+          "id": "pine-minus-mixed",
+          "district": "North",
+          "covers": [
+            "pine",
+            "mixed"
+          ]
+        }
+      ],
+      "replicates": [
+        {
+          "id": "g1",
+          "coefficient": "1/2",
+          "weights": {
+            "p1": 6,
+            "p2": 0,
+            "p3": 6,
+            "p4": 0,
+            "p5": 8
+          }
+        },
+        {
+          "id": "g2",
+          "coefficient": "1/2",
+          "weights": {
+            "p1": 2,
+            "p2": 4,
+            "p3": 2,
+            "p4": 4,
+            "p5": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "discordant",
+      "contrasts": [
+        {
+          "id": "pine-minus-mixed",
+          "district": "North",
+          "covers": [
+            "pine",
+            "mixed"
+          ]
+        }
+      ],
+      "replicates": [
+        {
+          "id": "g1",
+          "coefficient": "1/2",
+          "weights": {
+            "p1": 6,
+            "p2": 0,
+            "p3": 2,
+            "p4": 4,
+            "p5": 8
+          }
+        },
+        {
+          "id": "g2",
+          "coefficient": "1/2",
+          "weights": {
+            "p1": 2,
+            "p2": 4,
+            "p3": 6,
+            "p4": 0,
+            "p5": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "split-support",
+      "contrasts": [
+        {
+          "id": "pine-minus-mixed",
+          "district": "North",
+          "covers": [
+            "pine",
+            "mixed"
+          ]
+        }
+      ],
+      "replicates": [
+        {
+          "id": "g1",
+          "coefficient": "1/4",
+          "weights": {
+            "p1": 6,
+            "p2": 0,
+            "p3": 0,
+            "p4": 0,
+            "p5": 8
+          }
+        },
+        {
+          "id": "g2",
+          "coefficient": "1/4",
+          "weights": {
+            "p1": 2,
+            "p2": 4,
+            "p3": 0,
+            "p4": 0,
+            "p5": 8
+          }
+        },
+        {
+          "id": "g3",
+          "coefficient": "1/4",
+          "weights": {
+            "p1": 0,
+            "p2": 0,
+            "p3": 6,
+            "p4": 0,
+            "p5": 8
+          }
+        },
+        {
+          "id": "g4",
+          "coefficient": "1/4",
+          "weights": {
+            "p1": 0,
+            "p2": 0,
+            "p3": 2,
+            "p4": 4,
+            "p5": 8
+          }
+        }
+      ]
+    }
+  ]
+}

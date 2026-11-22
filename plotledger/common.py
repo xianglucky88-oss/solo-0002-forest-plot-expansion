@@ -1,5 +1,7 @@
 """Strict JSON and exact numeric values shared by the local command boundary."""
 import json
+import math
+from decimal import Decimal, localcontext
 from fractions import Fraction
 
 
@@ -50,6 +52,30 @@ def pieces(a, b):
 def scalar(x):
     q = Fraction(x)
     return q.numerator if q.denominator == 1 else str(q)
+
+
+def sqrt_text(value, digits=24):
+    """Root of a nonnegative rational, as exact rational when possible.
+
+    Ratios stay exact everywhere else.  A perfect square is reported in the
+    ordinary rational form; other roots are decimal text so JSON never carries
+    a rounded float.
+    """
+    q = Fraction(value)
+    require(q >= 0, 'cannot take the root of a negative value')
+    num, den = math.isqrt(q.numerator), math.isqrt(q.denominator)
+    if num * num == q.numerator and den * den == q.denominator:
+        # Exact root, still reported as text because errors are estimates.
+        return str(scalar(Fraction(num, den)))
+    with localcontext() as ctx:
+        ctx.prec = digits + 10
+        root = (Decimal(q.numerator) / Decimal(q.denominator)).sqrt()
+        ctx.prec = digits
+        root = +root
+    text = format(root, 'f')
+    if '.' in text:
+        text = text.rstrip('0').rstrip('.')
+    return text or '0'
 
 
 def encode(value):

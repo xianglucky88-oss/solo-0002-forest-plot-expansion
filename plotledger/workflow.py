@@ -1,7 +1,8 @@
 from collections import defaultdict
 from fractions import Fraction
 
-from .census import visit_facts
+from . import replication
+from .census import default_weights, expand, observations
 from .common import number, scalar
 from .design import load_plots
 
@@ -35,5 +36,11 @@ def summarize(facts):
 def materialize(doc):
     plots = load_plots(doc['plots'])
     minimum = number(doc['min_dbh_cm'], 'minimum diameter')
-    facts = visit_facts(plots, doc['visits'], minimum)
-    return {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum), 'plot_cover_facts': facts, 'districts': summarize(facts)}
+    observed = observations(plots, doc['visits'], minimum)
+    facts = expand(observed, default_weights(plots))
+    result = {'survey': doc['survey'], 'min_dbh_cm': scalar(minimum),
+              'plot_cover_facts': facts, 'districts': summarize(facts)}
+    rows = replication.declared(doc)
+    if rows is not None:
+        result['replications'] = replication.analyze(rows, plots, observations=observed)
+    return result
